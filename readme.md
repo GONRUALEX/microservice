@@ -1,0 +1,1 @@
+Spring Boot project with a microservices architecture, using Feign for communication between them and Kafka for message handling. Zipkin is implemented to monitor the latencies of the microservices, and Resilience is used to circuit-break dependent microservices, making the system more fault-tolerant.
