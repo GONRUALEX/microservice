@@ -3,6 +3,8 @@ package com.microservice.curso.kafka;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,4 +40,12 @@ public class ProviderTopic {
 	public KafkaTemplate<String, String> kafkaTemplate(ProducerFactory<String, String> producerFactory){
 		return new KafkaTemplate<>(producerFactory);
 	}
+	
+    @Bean
+    public AdminClient adminClient() {
+        Map<String, Object> configs = new HashMap<>();
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers); // Asegúrate de cambiar esto según tu entorno
+
+        return AdminClient.create(configs);
+    }
 }
