@@ -1,0 +1,25 @@
+# Directorios de compilación y ejecución
+/target/
+/bin/
+/build/
+
+# Archivos de dependencias y configuración de herramientas
+/.mvn/
+/mvnw
+/mvnw.cmd
+
+# Configuración específica del IDE
+/.idea/
+/.vscode/
+/.classpath
+/.project
+/.settings/
+
+# Archivos de logs
+*.log
+*.out
+hs_err_pid*
+
+# Caché de dependencias
+/.gradle/
+/.gradle/
